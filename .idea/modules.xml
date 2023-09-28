@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/auto_complete_text_view.iml" filepath="$PROJECT_DIR$/auto_complete_text_view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Auto-Complete-TextField-Flutter.iml" filepath="$PROJECT_DIR$/.idea/Auto-Complete-TextField-Flutter.iml" />
     </modules>
   </component>
 </project>
