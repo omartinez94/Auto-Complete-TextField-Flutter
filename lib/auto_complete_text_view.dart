@@ -76,7 +76,7 @@ class _AutoCompleteTextViewState extends State<AutoCompleteTextView> {
       if (widget.focusNode.hasFocus) {
         this.isSearching = true;
         this._overlayEntry = this._createOverlayEntry();
-        Overlay.of(context).insert(this._overlayEntry!);
+        Overlay.of(context)?.insert(this._overlayEntry!);
         if (widget.focusGained != null) widget.focusGained();
         _onSearchChanged();
       } else {
@@ -131,7 +131,7 @@ class _AutoCompleteTextViewState extends State<AutoCompleteTextView> {
                                 controller: scrollController,
                                 padding: EdgeInsets.zero,
                                 shrinkWrap: true,
-                                itemCount: suggestionShowList?.length,
+                                itemCount: suggestionShowList.length,
                                 itemBuilder: (context, index) {
                                   return ListTile(
                                     title: Text(
@@ -178,7 +178,7 @@ class _AutoCompleteTextViewState extends State<AutoCompleteTextView> {
         onSubmitted: widget.onSubmitted,
         textInputAction: widget.tfInputAction,
         onChanged: (text) {
-          if (widget?.onValueChanged != null) widget?.onValueChanged(text);
+          widget.onValueChanged(text);
           isSearching = true;
           scrollController.animateTo(
             0.0,
